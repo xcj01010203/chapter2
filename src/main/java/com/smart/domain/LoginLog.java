@@ -3,6 +3,7 @@ package com.smart.domain;
 import java.util.Date;
 
 public class LoginLog {
+    public static final String TABLE_NAME = "t_login_log";
     private int id;
     private int userId;
     private String ip;

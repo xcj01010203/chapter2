@@ -14,22 +14,22 @@ public class UserDao extends BaseDao {
     private  final static String MATCH_COUNT_SQL = " SELECT count(*) FROM t_user  " +
             " WHERE name =? and password=? ";
     private  final static String UPDATE_LOGIN_INFO_SQL = " UPDATE t_user SET " +
-            " last_visit=?,last_ip=?,credits=?  WHERE id =?";
+            " lastVisit=?,lastIp=?,credits=?  WHERE id =?";
 
-    public int getMatchCount(String userName, String password) {
+    public int getMatchCount(String name, String password) {
 
-        return this.getJdbcTemplate().queryForObject(MATCH_COUNT_SQL, new Object[]{userName, password}, Integer.class);
+        return this.getJdbcTemplate().queryForObject(MATCH_COUNT_SQL, new Object[]{name, password}, Integer.class);
     }
 
-    public User findUserByUserName(final String userName) {
+    public User findByName(final String name) {
         String sqlStr = " SELECT id,name,credits "
                 + " FROM t_user WHERE name =? ";
         final User user = new User();
-        this.getJdbcTemplate().query(sqlStr, new Object[] { userName },
+        this.getJdbcTemplate().query(sqlStr, new Object[] {name},
                 new RowCallbackHandler() {
                     public void processRow(ResultSet rs) throws SQLException {
                         user.setId(rs.getInt("id"));
-                        user.setName(userName);
+                        user.setName(name);
                         user.setCredits(rs.getInt("credits"));
                     }
                 });

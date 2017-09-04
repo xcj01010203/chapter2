@@ -18,7 +18,7 @@
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="10" parent="7" name="user_id">
+    <column id="10" parent="7" name="userId">
       <Position>2</Position>
       <DataType>int(11)|0</DataType>
     </column>
@@ -26,7 +26,7 @@
       <Position>3</Position>
       <DataType>varchar(23)|0</DataType>
     </column>
-    <column id="12" parent="7" name="login_datetime">
+    <column id="12" parent="7" name="loginDateTime">
       <Position>4</Position>
       <DataType>datetime|0</DataType>
     </column>
@@ -55,11 +55,11 @@
       <Position>4</Position>
       <DataType>int(11)|0</DataType>
     </column>
-    <column id="18" parent="8" name="last_visit">
+    <column id="18" parent="8" name="lastVisit">
       <Position>5</Position>
       <DataType>datetime|0</DataType>
     </column>
-    <column id="19" parent="8" name="last_ip">
+    <column id="19" parent="8" name="lastIp">
       <Position>6</Position>
       <DataType>varchar(23)|0</DataType>
     </column>

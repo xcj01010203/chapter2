@@ -3,6 +3,7 @@ package com.smart.domain;
 import java.util.Date;
 
 public class User {
+    public static final String TABLE_NAME = "t_user";
     private int id;
     private String name;
     private String password;

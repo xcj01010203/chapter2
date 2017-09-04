@@ -103,7 +103,7 @@ public class BaseDao<T> {
 
         Object[] objArray = list.toArray();
         for (int i = 0; i < list.size(); i++) {
-            insertSql.append(" ?, ");
+            insertSql.append(" ?,");
         }
         insertSql = new StringBuffer(insertSql.substring(0, insertSql.length() - 1));
         insertSql.append(" ) ");
