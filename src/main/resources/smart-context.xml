@@ -18,13 +18,15 @@
     <context:component-scan base-package="com.smart.service"/>
     <context:component-scan base-package="com.smart.dao"/>
 
+    <context:property-placeholder location="classpath:jdbc.properties"/>
+
     <!-- 配置使用DBCP实现的数据源 -->
     <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource"
           destroy-method="close"
-          p:driverClassName="com.mysql.jdbc.Driver"
-          p:url="jdbc:mysql://localhost/sampledb"
-          p:username="root"
-          p:password="root" />
+          p:driverClassName="${jdbc.driverClassName}"
+          p:url="${jdbc.url}"
+          p:username="${jdbc.username}"
+          p:password="${jdbc.password}" />
 
     <!-- 配置Jdbc模板  -->
     <bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate"
