@@ -4,12 +4,14 @@ import com.smart.domain.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.testng.AbstractTransactionalTestNGSpringContextTests;
-import org.testng.annotations.*;
-import static org.testng.Assert.*;
+import org.testng.annotations.Test;
 
 import java.util.Date;
 
-@ContextConfiguration("classpath:/smart-context.xml")
+import static org.testng.Assert.assertEquals;
+import static org.testng.Assert.assertTrue;
+
+@ContextConfiguration("classpath*:/smart-context.xml")
 public class UserServiceTest extends AbstractTransactionalTestNGSpringContextTests {
 
     @Autowired
@@ -29,9 +31,7 @@ public class UserServiceTest extends AbstractTransactionalTestNGSpringContextTes
             User user = userService.queryUserByName("admin");
             assertEquals(user.getName(), "admin");
         }
-
     }
-
 
     @Test
     public void testAddLoginLog() throws Exception {

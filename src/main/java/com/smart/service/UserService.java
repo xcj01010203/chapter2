@@ -6,6 +6,7 @@ import com.smart.domain.LoginLog;
 import com.smart.domain.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 @Service
 public class UserService {
@@ -25,6 +26,7 @@ public class UserService {
         return this.userDao.findByName(name);
     }
 
+
     public void loginSuccess(User user) throws Exception{
         user.setCredits(5 + user.getCredits());
         LoginLog log = new LoginLog();
@@ -33,7 +35,6 @@ public class UserService {
         log.setUserId(user.getId());
 
         this.userDao.updateLoginInfo(user);
-
         this.loginLogDao.addOne(log);
     }
 }
