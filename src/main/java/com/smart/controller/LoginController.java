@@ -5,6 +5,7 @@ import com.smart.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
@@ -36,5 +37,12 @@ public class LoginController {
             request.getSession().setAttribute("user", user);
             return new ModelAndView("main");
         }
+    }
+
+    @ResponseBody
+    @RequestMapping("/test")
+    public User test() throws Exception {
+        User user = this.userService.queryUserByName("admin");
+        return user;
     }
 }
