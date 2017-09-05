@@ -28,7 +28,6 @@ public class UserService {
         return this.userDao.findByName(name);
     }
 
-
     public void loginSuccess(User user) throws Exception{
         user.setCredits(5 + user.getCredits());
         LoginLog log = new LoginLog();
