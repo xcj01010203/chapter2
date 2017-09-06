@@ -21,6 +21,7 @@
         <testng.version>6.8.7</testng.version>
     </properties>
 
+    <!--统一spring版本，配置了之后就不需要在依赖中写版本号了-->
     <dependencyManagement>
         <dependencies>
             <dependency>
