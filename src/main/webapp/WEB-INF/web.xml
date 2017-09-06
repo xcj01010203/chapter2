@@ -5,7 +5,7 @@
          xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
 	http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
 
-    <!--从类路径下家在spring配置文件-->
+    <!--从类路径下加载spring配置文件-->
     <context-param>
         <param-name>contextConfigLocation</param-name>
         <param-value>classpath*:smart-context.xml</param-value>

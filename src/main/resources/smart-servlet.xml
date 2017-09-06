@@ -18,5 +18,5 @@
             p:suffix=".jsp" />
 
     <!--配置静态文件地址-->
-    <mvc:resources mapping="/**" location="/static/"/>
+    <mvc:resources mapping="/static/**" location="/static/"/>
 </beans>
