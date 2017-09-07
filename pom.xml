@@ -21,6 +21,8 @@
         <testng.version>6.8.7</testng.version>
         <logback.version>1.1.7</logback.version>
         <jcloverslf.version>1.7.21</jcloverslf.version>
+        <jackson.version>2.6.5</jackson.version>
+        <sitemesh.version>3.0.1</sitemesh.version>
     </properties>
 
     <!--统一spring版本，配置了之后就不需要在依赖中写版本号了-->
@@ -119,13 +121,15 @@
         <!--JSON序列化-->
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
-            <artifactId>jackson-core</artifactId>
-            <version>${jackson.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-databind</artifactId>
             <version>${jackson.version}</version>
+        </dependency>
+
+        <!--页面模板-->
+        <dependency>
+            <groupId>org.sitemesh</groupId>
+            <artifactId>sitemesh</artifactId>
+            <version>${sitemesh.version}</version>
         </dependency>
 
         <!--测试类-->

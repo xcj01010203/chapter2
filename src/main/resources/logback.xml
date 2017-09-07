@@ -12,7 +12,7 @@
 
     <appender name="file" class="ch.qos.logback.core.rolling.RollingFileAppender">
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-            <fileNamePattern>${logback.rootPath}/logs/smart/%d{yyyy-MM-dd}.log</fileNamePattern>
+            <fileNamePattern>${logback.rootPath}/%d{yyyy-MM-dd}.log</fileNamePattern>
             <maxHistory>${logback.maxHistory}</maxHistory>
         </rollingPolicy>
         <encoder>

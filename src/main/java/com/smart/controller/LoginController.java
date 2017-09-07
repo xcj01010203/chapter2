@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
-import java.util.Date;
+import java.util.*;
 
 @Controller
 public class LoginController {
@@ -41,8 +41,14 @@ public class LoginController {
 
     @ResponseBody
     @RequestMapping("/test")
-    public User test() throws Exception {
-        User user = this.userService.queryUserByName("admin");
-        return user;
+    public Object test() throws Exception {
+        Map<String, String> testMap = new HashMap<String, String>();
+        testMap.put("name", "xcj");
+        testMap.put("age", "27");
+
+        List<Map<String, String>> list = new ArrayList<Map<String, String>>();
+        list.add(testMap);
+        list.add(testMap);
+        return list;
     }
 }
