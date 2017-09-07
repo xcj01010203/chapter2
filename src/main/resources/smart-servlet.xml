@@ -7,16 +7,18 @@
        http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
        http://www.springframework.org/schema/context
        http://www.springframework.org/schema/context/spring-context-4.0.xsd http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd">
+
     <!-- 扫描web包，应用Spring的注解 -->
     <context:component-scan base-package="com.smart.controller"/>
 
     <!-- 配置视图解析器，将ModelAndView及字符串解析为具体的页面 -->
-    <bean
-            class="org.springframework.web.servlet.view.InternalResourceViewResolver"
-            p:viewClass="org.springframework.web.servlet.view.JstlView"
-            p:prefix="/jsp/"
-            p:suffix=".jsp" />
+    <bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <property name="prefix" value="/WEB-INF/jsp/"/>
+        <property name="suffix" value=".jsp"/>
+    </bean>
 
     <!--配置静态文件地址-->
-    <mvc:resources mapping="/static/**" location="/static/"/>
+    <!--如果没有<annotation-driven/>， <resource/> 元素会拦截任意控制器被调用，从而DispatcherServlet不起作用-->
+    <mvc:annotation-driven />
+    <mvc:resources mapping="/static/**" location="/static/" />
 </beans>

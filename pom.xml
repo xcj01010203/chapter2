@@ -116,6 +116,18 @@
             <version>${logback.version}</version>
         </dependency>
 
+        <!--JSON序列化-->
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-core</artifactId>
+            <version>${jackson.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>${jackson.version}</version>
+        </dependency>
+
         <!--测试类-->
         <dependency>
             <groupId>org.testng</groupId>

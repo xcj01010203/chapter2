@@ -4,12 +4,13 @@
 <html>
 <head>
     <title>小春论坛登录</title>
+    <script type="application/javascript" src="/static/js/test.js"></script>
 </head>
 <body>
 <c:if test="${!empty error}">
     <font color="red"><c:out value="${error}" /></font>
 </c:if>
-<form action="<c:url value="loginCheck"/>" method="post">
+<form action="/loginCheck" method="post">
     用户名：
     <input type="text" name="name">
     <br>
