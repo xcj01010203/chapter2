@@ -1,24 +1,22 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<configuration scan="true" scanPeriod="10 seconds" debug="false">
-    <!-- 日志的上下文路径 -->
-    <property name="logPath" value="~/IdeaProjects/"/>
-    <!-- 配置日志的滚动时间 -->
-    <property name="maxHistory" value="90"/>
+<configuration>
+    <!--引入配置文件-->
+    <property resource="config.properties"/>
 
     <!--控制台输出 -->
     <appender name="stdout" class="ch.qos.logback.core.ConsoleAppender">
         <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
-            <Pattern>%date{yyyy-MM-dd HH:mm:ss.SSS} %-5level[%thread]%logger{56}.%method:%L -%msg%n</Pattern>
+            <Pattern>%d [%thread] %-5level %logger{56}.%method: %L -%msg%n</Pattern>
         </encoder>
     </appender>
 
     <appender name="file" class="ch.qos.logback.core.rolling.RollingFileAppender">
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-            <fileNamePattern>${logPath}/logs/smart/%d{yyyy-MM-dd}.log</fileNamePattern>
-            <maxHistory>${maxHistory}</maxHistory>
+            <fileNamePattern>${logback.rootPath}/logs/smart/%d{yyyy-MM-dd}.log</fileNamePattern>
+            <maxHistory>${logback.maxHistory}</maxHistory>
         </rollingPolicy>
         <encoder>
-            <pattern>%t %-20(%d{MM-dd HH:mm:ss.SSS}) %-5level %logger{80}[%line] - %msg%n</pattern>
+            <pattern>%d [%thread] %-5level %logger{56}.%method: %L -%msg%n</pattern>
         </encoder>
     </appender>
 
