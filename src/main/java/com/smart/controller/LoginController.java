@@ -17,12 +17,6 @@ public class LoginController {
     @Autowired
     private UserService userService;
 
-
-    @RequestMapping("/")
-    public String LoginPage() {
-        return "login";
-    }
-
     @RequestMapping("/loginCheck")
     public ModelAndView loginCheck(HttpServletRequest request, String name, String password) throws Exception{
         boolean isValidUser = this.userService.checkHasMatchUser(name, password);

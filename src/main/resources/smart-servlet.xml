@@ -21,4 +21,6 @@
     <!--如果没有<annotation-driven/>， <resource/> 元素会拦截任意控制器被调用，从而DispatcherServlet不起作用-->
     <mvc:annotation-driven />
     <mvc:resources mapping="/static/**" location="/static/" />
+
+    <mvc:view-controller path="/" view-name="redirect:/base/forward/nomenu/login" />
 </beans>

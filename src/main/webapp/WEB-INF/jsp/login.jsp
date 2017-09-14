@@ -3,7 +3,7 @@
 <html>
 <head>
     <title>小春论坛登录</title>
-    <script type="application/javascript" src="/static/js/test.js"></script>
+    <script type="application/javascript" src="/static/js/decorator.js"></script>
 </head>
 <body>
 <form action="/loginCheck" method="post">
