@@ -22,5 +22,6 @@
     <mvc:annotation-driven />
     <mvc:resources mapping="/static/**" location="/static/" />
 
-    <mvc:view-controller path="/" view-name="redirect:/base/forward/nomenu/login" />
+    <!--配置项目跟路径为登陆页-->
+    <mvc:view-controller path="/" view-name="redirect:/page/forward/nomenu/login" />
 </beans>

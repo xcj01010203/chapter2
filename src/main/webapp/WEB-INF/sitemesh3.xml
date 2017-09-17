@@ -1,10 +1,11 @@
 <sitemesh>
     <mapping>
-        <path>/base/forward/menu/*</path>
+        <path>/page/forward/menu/*</path>
         <decorator>/WEB-INF/jsp/decorators/main_menu.jsp</decorator>
         <decorator>/WEB-INF/jsp/decorators/common.jsp</decorator>
     </mapping>
-    <mapping path="/base/forward/nomenu/*" decorator="/WEB-INF/jsp/decorators/common.jsp"/>
+    <mapping path="/page/forward/nomenu/*" decorator="/WEB-INF/jsp/decorators/common.jsp"/>
 
+    <!--不拦截静态资源-->
     <mapping path="/static/*" exclude="true"/>
 </sitemesh>

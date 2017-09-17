@@ -1,0 +1,33 @@
+.shy-projects {
+  background: #444;
+  height: 40px;
+  overflow: hidden;
+}
+.shy-projects a {
+  position: relative;
+  display: block;
+  float: left;
+  height: 40px;
+  padding-left: 20px;
+  padding-right: 20px;
+  color: #eee;
+  line-height: 40px;
+  font-size: 14px;
+}
+.shy-projects a.active {
+  background: 0 0;
+  cursor: default;
+  pointer-events: none;
+}
+.shy-projects a.active:after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  height: 0;
+  width: 0;
+  margin-left: -8px;
+  border-color: transparent transparent #0e90d2;
+  border-style: none solid solid;
+  border-width: 0 8px 8px;
+}

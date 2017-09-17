@@ -1,0 +1,13 @@
+.am-topbar {
+  margin-bottom: 0;
+}
+.amz-banner {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  background-color: #f5f5f5;
+  overflow-y: hidden;
+}
+.amz-banner h1 {
+  font-weight: 400;
+  font-size: 36px;
+}

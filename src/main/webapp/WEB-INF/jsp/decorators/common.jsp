@@ -9,7 +9,7 @@
   <meta name="keywords" content="">
   <meta name="viewport"
         content="width=device-width, initial-scale=1">
-  <title>Hello Amaze UI</title>
+  <title>山腰儿工作室</title>
 
   <!-- Set render engine for 360 browser -->
   <meta name="renderer" content="webkit">
@@ -46,13 +46,9 @@
   <![endif]-->
   <script src="/static/component/amazeui/js/amazeui.min.js"></script>
 
-  <title>嘿，老头</title>
   <sitemesh:write property='head'/>
 </head>
 <body>
-<p>
-  common
-</p>
 <sitemesh:write property='body'/>
 </body>
 </html>

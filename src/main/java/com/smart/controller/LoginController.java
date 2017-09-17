@@ -29,7 +29,7 @@ public class LoginController {
             this.userService.loginSuccess(user);
 
             request.getSession().setAttribute("user", user);
-            return new ModelAndView("main");
+            return new ModelAndView("redirect:/page/forward/menu/index");
         }
     }
 
